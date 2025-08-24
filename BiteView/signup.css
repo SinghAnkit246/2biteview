@@ -1,0 +1,242 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- CSS Variables for Easy Customization --- */
+:root {
+    --primary-green: #34D399;
+    /* A vibrant green for buttons and highlights */
+    --dark-green: #065F46;
+    /* A darker green for the CTA background */
+    --text-dark: #1F2937;
+    /* Dark gray for main text */
+    --text-light: #6B7280;
+    /* Lighter gray for paragraphs */
+    --background-light: #FFFFFF;
+    --background-cta: #10B981;
+    --container-width: 1100px;
+}
+
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* Padding keeps it from touching the screen edges */
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+header nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-actions .btn {
+    background-color: var(--background-cta);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: var(--dark-green);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* horizontal center */
+    align-items: center;
+    /* vertical center */
+    padding-top: 50px;
+    /* header height */
+    box-sizing: border-box;
+}
+
+/* ===== Signup Box ===== */
+.signup {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #2e2e2e;
+}
+
+/* ===== Input Fields ===== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #2ca56d;
+}
+
+/* File input styling */
+.form-group input[type="file"] {
+    padding: 6px;
+    font-size: 14px;
+}
+
+/* ===== Button ===== */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #2ca56d;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--dark-green);
+}
+
+/* ===== Bottom Text ===== */
+.text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.text a {
+    margin-left: 5px;
+    color: #2ca56d;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.text a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Footer Styling ===== */
+footer {
+  position: fixed;   /* Stick to bottom of the page */
+  bottom: 10px;      /* Small space from bottom */
+  left: 0;
+  width: 100%;       /* Full width */
+  text-align: center; /* Center the text */
+  font-size: 14px;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .signup {
+        padding: 25px;
+    }
+
+    .signup h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+    body {
+        padding: 10px;
+    }
+
+    .signup {
+        padding: 20px;
+    }
+
+    .signup h2 {
+        font-size: 22px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+}

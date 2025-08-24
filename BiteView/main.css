@@ -1,0 +1,412 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- CSS Variables for Easy Customization --- */
+:root {
+    --primary-green: #34D399;
+    /* A vibrant green for buttons and highlights */
+    --dark-green: #065F46;
+    /* A darker green for the CTA background */
+    --text-dark: #1F2937;
+    /* Dark gray for main text */
+    --text-light: #6B7280;
+    /* Lighter gray for paragraphs */
+    --background-light: #FFFFFF;
+    --background-cta: #10B981;
+    --container-width: 1100px;
+}
+
+/* --- General & Reset Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    line-height: 1.6;
+}
+
+/* --- Utility Classes --- */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    /* Padding keeps it from touching the screen edges */
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+nav a:hover {
+    color: var(--primary-green);
+}
+
+header nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-actions .btn{
+    background-color: var(--background-cta);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.btn:hover {
+    background-color: var(--dark-green);
+}
+
+/* --- Hero Section --- */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+#hero h1 strong {
+    color: var(--primary-green);
+}
+
+#hero p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.demo-btn {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.demo-btn:hover {
+    background-color: var(--dark-green);
+}
+
+/* Feature Section */
+#features {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.features-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+.features-header .highlight {
+    color: #34D399;
+    /* Your primary green */
+}
+
+.features-header p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-top: 10px;
+}
+
+/* --- Grid Layout --- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* --- Feature Items --- */
+.feature-item {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.feature-item img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.feature-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* --- Hover Effect --- */
+.feature-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid #34D399;
+}
+
+/* --- How It Works Section --- */
+#how-it-works {
+    padding: 80px 20px;
+    background-color: #F9FAFB;
+}
+
+#how-it-works .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+#how-it-works .text-content,
+#how-it-works .image-content {
+    flex: 1;
+}
+
+#how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#how-it-works ol {
+    list-style: none;
+    counter-reset: steps-counter;
+}
+
+#how-it-works ol li {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-left: 45px;
+    position: relative;
+}
+
+#how-it-works ol li::before {
+    counter-increment: steps-counter;
+    content: counter(steps-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+#how-it-works .image-content img {
+    width: 100%;
+    max-height: 440px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Call to Action (CTA) Section --- */
+#contact {
+    background-color: var(--background-cta);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.contact-btn {
+    background-color: white;
+    color: var(--text-dark);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #F3F4F6;
+    transform: translateY(-2px);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--text-dark);
+    color: #E5E7EB;
+    padding: 60px 20px 20px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #4B5563;
+}
+
+footer .footer-column h3,
+footer .footer-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+footer .footer-column p {
+    color: #D1D5DB;
+    margin-bottom: 15px;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+footer .social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #D1D5DB;
+    transition: color 0.3s ease;
+}
+
+footer ul a:hover {
+    color: white;
+}
+
+footer .footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #9CA3AF;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+footer .legal-links a {
+    text-decoration: none;
+    color: #9CA3AF;
+    margin-left: 15px;
+}
+
+footer .legal-links a:hover {
+    color: white;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        /* Simple responsive nav for mobile */
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #features .features-grid {
+        flex-direction: column;
+    }
+
+    #how-it-works .content-wrapper {
+        flex-direction: column;
+    }
+
+    footer .footer-content,
+    footer .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .social-links {
+        justify-content: center;
+    }
+
+    footer .legal-links {
+        margin-top: 10px;
+    }
+}
